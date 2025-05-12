@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/index.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <!-- QUẢN LÝ TUYỂN SINH -->
+   <section class="max-w-4xl mx-auto p-6 mt-12 bg-white border">
+  <h1 class="text-3xl font-bold text-red-600 text-center mb-6">QUẢN LÝ TUYỂN SINH</h1>
+  
+  <fieldset class="border border-gray-300 p-4 rounded">
+    <legend class="text-lg font-semibold px-2">Quản lý tuyển sinh</legend>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+
+      <!-- Cột trái -->
+      <div class="space-y-4">
+        <!-- Điểm chuẩn -->
+        <div>
+          <label for="cutOffScore" title="Điểm chuẩn của hội đồng" class="block font-medium mb-1">Điểm chuẩn:</label>
+          <input class="border border-gray-300 p-2 w-full rounded" type="text" name="Điểm chuẩn" id="cutOffScore">
+        </div>
+
+        <!-- Khu vực -->
+        <div>
+          <span class="block font-medium mb-1">Khu vực:</span>
+          <div class="flex flex-wrap gap-4">
+            <label><input type="radio" name="Khu vực" id="area_A"> KV-A</label>
+            <label><input type="radio" name="Khu vực" id="area_B"> KV-B</label>
+            <label><input type="radio" name="Khu vực" id="area_C"> KV-C</label>
+            <label><input type="radio" name="Khu vực" id="area_X"> None</label>
+          </div>
+        </div>
+
+        <!-- Đối tượng -->
+        <div>
+          <span class="block font-medium mb-1">Đối tượng:</span>
+          <div class="flex flex-wrap gap-4">
+            <label><input type="radio" name="Đối tượng" id="targetGroup_1"> DT-1</label>
+            <label><input type="radio" name="Đối tượng" id="targetGroup_2"> DT-2</label>
+            <label><input type="radio" name="Đối tượng" id="targetGroup_3"> DT-3</label>
+            <label><input type="radio" name="Đối tượng" id="none_targetGroup"> None</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cột phải -->
+      <div class="space-y-4">
+        <div>
+          <label for="score1" class="block font-medium mb-1">Điểm 1:</label>
+          <input class="border border-gray-300 p-2 w-full rounded" type="text" name="Điểm 1" id="score1">
+        </div>
+        <div>
+          <label for="score2" class="block font-medium mb-1">Điểm 2:</label>
+          <input class="border border-gray-300 p-2 w-full rounded" type="text" name="Điểm 2" id="score2">
+        </div>
+        <div>
+          <label for="score3" class="block font-medium mb-1">Điểm 3:</label>
+          <input class="border border-gray-300 p-2 w-full rounded" type="text" name="Điểm 3" id="score3">
+        </div>
+      </div>
+    </div>
+
+    <!-- Nút kết quả -->
+    <div class="text-center mt-6">
+      <button type="button" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
+        Kết quả
+      </button>
+    </div>
+  </fieldset>
+</section>
+<!-- TÍNH TIỀN ĐIỆN -->
+  <section class="max-w-4xl mx-auto p-6 mb-12 mt-12 bg-white border">
+  <h1 class="text-3xl font-bold text-red-600 text-center mb-6">TÍNH TIỀN ĐIỆN</h1>
+  
+  <fieldset class="border border-gray-300 p-4 rounded">
+    <legend class="text-lg font-semibold px-2">Tính tiền điện</legend>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+      <!-- Họ tên -->
+      <div>
+        <label for="customerName" class="block font-medium mb-1">Họ tên khách hàng:</label>
+        <input type="text" id="customerName" name="customerName" 
+               class="border border-gray-300 p-2 w-full rounded" placeholder="Nguyễn Văn A">
+      </div>
+
+      <!-- Số kWh -->
+      <div>
+        <label for="electricUsage" class="block font-medium mb-1">Số ký điện (kWh):</label>
+        <input type="number" id="electricUsage" name="electricUsage" 
+               class="border border-gray-300 p-2 w-full rounded" placeholder="Nhập số kWh">
+      </div>
+    </div>
+
+    <!-- Nút kết quả -->
+    <div class="text-center mt-6">
+      <button type="button" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
+        Kết quả
+      </button>
+    </div>
+  </fieldset>
+</section>
+<!-- TÍNH THUẾ THU NHẬP CÁ NHÂN -->
+ <section class="max-w-4xl mx-auto mb-12 p-6 mt-12 bg-white border">
+  <h1 class="text-3xl font-bold text-green-600 text-center mb-6">TÍNH THUẾ THU NHẬP CÁ NHÂN</h1>
+  
+  <fieldset class="border border-gray-300 p-4 rounded">
+    <legend class="text-lg font-semibold px-2">Thông tin thu nhập</legend>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+      <!-- Họ tên -->
+      <div>
+        <label for="fullName" class="block font-medium mb-1">Họ tên:</label>
+        <input type="text" id="fullName" name="fullName"
+               class="border border-gray-300 p-2 w-full rounded" placeholder="Nguyễn Văn A">
+      </div>
+
+      <!-- Tổng thu nhập năm -->
+      <div>
+        <label for="annualIncome" class="block font-medium mb-1">Tổng thu nhập năm (VNĐ):</label>
+        <input type="number" id="annualIncome" name="annualIncome"
+               class="border border-gray-300 p-2 w-full rounded" placeholder="VD: 250000000">
+      </div>
+
+      <!-- Số người phụ thuộc -->
+      <div>
+        <label for="dependents" class="block font-medium mb-1">Số người phụ thuộc:</label>
+        <input type="number" id="dependents" name="dependents"
+               class="border border-gray-300 p-2 w-full rounded" placeholder="VD: 2">
+      </div>
+    </div>
+
+    <!-- Nút tính -->
+    <div class="text-center mt-6">
+      <button type="button" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
+        Kết quả
+      </button>
+    </div>
+  </fieldset>
+</section>
+<!-- TÍNH TIỀN CÁP  -->
+ <section class="max-w-4xl mx-auto mb-12 p-6 mt-12 bg-white border">
+  <h1 class="text-3xl font-bold text-purple-600 text-center mb-6">TÍNH HÓA ĐƠN CÁP</h1>
+
+  <fieldset class="border border-gray-300 p-4 rounded">
+    <legend class="text-lg font-semibold px-2">Thông tin khách hàng</legend>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+      <!-- Mã khách hàng -->
+      <div>
+        <label for="customerCode" class="block font-medium mb-1">Mã khách hàng:</label>
+        <input type="text" id="customerCode" name="customerCode"
+               class="border border-gray-300 p-2 w-full rounded" placeholder="KH123456">
+      </div>
+
+      <!-- Loại khách hàng -->
+      <div>
+        <label for="customerType" class="block font-medium mb-1">Loại khách hàng:</label>
+        <select id="customerType" name="customerType" class="border border-gray-300 p-2 w-full rounded">
+          <option value="">-- Chọn loại --</option>
+          <option value="cá nhân">Cá nhân</option>
+          <option value="doanh nghiệp">Doanh nghiệp</option>
+        </select>
+      </div>
+
+      <!-- Số kết nối -->
+      <div>
+        <label for="connectionCount" class="block font-medium mb-1">Số kết nối:</label>
+        <input type="number" id="connectionCount" name="connectionCount"
+               class="border border-gray-300 p-2 w-full rounded" placeholder="VD: 5">
+      </div>
+
+      <!-- Số kênh cao cấp -->
+      <div>
+        <label for="premiumChannels" class="block font-medium mb-1">Số kênh cao cấp:</label>
+        <input type="number" id="premiumChannels" name="premiumChannels"
+               class="border border-gray-300 p-2 w-full rounded" placeholder="VD: 3">
+      </div>
+    </div>
+
+    <!-- Nút tính -->
+    <div class="text-center mt-6">
+      <button type="button" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
+        Kết quả
+      </button>
+    </div>
+  </fieldset>
+</section>
+
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
